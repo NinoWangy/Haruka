@@ -15,7 +15,7 @@ global.background = "https://telegra.ph/file/d4c05638fa7886a1d8060.jpg"
 global.lolkey = 'e966d3aac613b61dabd35cc6' //register lolhuman.xyz klo mau apikey
 global.zenzkey = '8423e19c13' //register zenzapi.xyz klo mau apikey
 global.limit = {
-		free:1,
+		free:20,
 		premium:1000
 	}
 global.session_name = "session.json"
