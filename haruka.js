@@ -24,8 +24,8 @@ const { color } = require('./lib/color')
 const CFonts  = require('cfonts')
 const { uploadImages } = require('./lib/uploadimage')
 
-require('./cmd/msg.js')
-nocache('./cmd/msg.js', module => console.log(`${module} is now updated!`))
+require('./command/case.js')
+nocache('./command/case.js', module => console.log(`${module} is now updated!`))
 
 const starts = async (nino = new WAConnection()) => {
     nino.logger.level = 'warn'
@@ -57,7 +57,7 @@ const starts = async (nino = new WAConnection()) => {
         fs.writeFileSync('./session.json', JSON.stringify(nino.base64EncodedAuthInfo(), null, '\t'))
 
     nino.on('chat-update', async (message) => {
-        require('./cmd/msg.js')(nino, message)
+        require('./command/case.js')(nino, message)
     })
 
 	nino.on('group-participants-update', async (anu) => {
